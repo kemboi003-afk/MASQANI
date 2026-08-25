@@ -5,3 +5,9 @@ node_modules/
 .masqani-data/
 *.log
 coverage/
+.env.local
+.env.production
+.env.*.local
+.env.local
+.env.production
+.env.*.local
