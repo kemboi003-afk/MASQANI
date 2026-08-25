@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse Kenya rental listings on MASQANI." />
+    <title>Browse homes | MASQANI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="logo.css" />
+  </head>
+  <body>
+    <header class="site-header"><a class="logo" href="index.html" aria-label="MASQANI home"><img src="assets/masqani-logo.png" alt="MASQANI — Find your place." /></a><nav class="desktop-nav"><a class="active-nav" href="listings.html">Find a home</a><a href="tenant.html">Tenant</a><a href="landlord.html">Landlord</a><a href="safety.html">Safety</a></nav><div class="header-actions"><a class="login" href="auth.html">Log in</a><a class="button button-small" href="landlord.html">List a property</a></div></header>
+    <main class="listing-page">
+      <section class="listing-intro"><div class="container"><p class="eyebrow">KENYA RENTAL LISTINGS</p><h1>Find a home that fits.</h1><p>Compare rent, location and essentials before requesting a viewing. Preview listings are not verified MASQANI listings.</p></div></section>
+      <section class="container listing-layout">
+        <aside class="listing-filters"><div class="filter-heading"><h2>Filters</h2><button id="clear-filters" type="button">Clear</button></div><label>Location<input id="listing-location" placeholder="e.g. Nairobi, Uthiru" /></label><label>Property type<select id="listing-type"><option value="">All types</option><option>Single Room</option><option>Bedsitter</option><option>1 Bedroom</option><option>House</option></select></label><label>Maximum monthly rent<select id="listing-price"><option value="">Any budget</option><option value="5000">KSh 5,000</option><option value="10000">KSh 10,000</option><option value="15000">KSh 15,000</option><option value="30000">KSh 30,000</option><option value="70000">KSh 70,000</option></select></label><label>Minimum rooms<select id="listing-rooms"><option value="">Any</option><option value="1">1 room</option><option value="2">2+ rooms</option><option value="3">3+ rooms</option></select></label><button class="button" id="listing-search" type="button">Apply filters</button></aside>
+        <div><div class="listing-toolbar"><p id="listing-count">Loading listings</p><select id="listing-sort" aria-label="Sort listings"><option value="newest">Newest listings</option><option value="low">Lowest rent</option><option value="high">Highest rent</option></select></div><div id="listing-grid" class="listing-grid"></div></div>
+      </section>
+    </main>
+    <dialog id="property-dialog" class="property-dialog"><article id="property-detail"></article></dialog>
+    <footer><div class="container footer-grid"><div><a class="logo footer-logo" href="index.html"><img src="assets/masqani-logo.png" alt="MASQANI — Find your place." /></a><p>Find your place.</p><small>© 2026 Masqani.</small></div><div><h3>Explore</h3><a href="listings.html">Find a home</a><a href="index.html#how-it-works">How it works</a></div><div><h3>Stay safe</h3><a href="index.html#how-it-works">Verification</a><a href="#">Report a listing</a></div></div></footer>
+    <script src="client-config.js"></script><script src="listings.js"></script>
+  </body>
+</html>

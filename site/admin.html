@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Admin dashboard | MASQANI</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="logo.css"><link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <header class="site-header"><a class="logo" href="index.html"><img src="assets/masqani-logo.png" alt="MASQANI"></a><nav class="desktop-nav"><a href="listings.html">Listings</a><a href="admin.html">Admin</a><a href="safety.html">Safety</a></nav><div class="header-actions"><a class="login" href="auth.html">Admin log in</a></div></header>
+  <main class="portal-page"><div class="container">
+    <div class="portal-head"><div><p class="eyebrow">ADMIN DASHBOARD</p><h1>Moderation and trust control.</h1><p id="dashboard-message" class="muted">Log in with an authorized admin account to access live controls.</p></div></div>
+    <div class="portal-layout"><aside class="portal-nav"><a class="active" href="#moderation">Listing moderation</a><a href="#reports">Reports</a><a href="#users">Users</a><a href="#payments">Plans & payments</a></aside>
+      <div class="portal-grid">
+        <section id="moderation" class="portal-panel"><h2>Listings awaiting review</h2><p>Approve only after checking property information, owner identity and image accuracy.</p><div id="moderation-list" class="portal-list"></div></section>
+        <section id="reports" class="portal-panel"><h2>Reports</h2><p>Review scam, duplicate-image, incorrect-rent and unavailable-property reports.</p><div id="report-list" class="portal-list"></div></section>
+        <section id="users" class="stat-grid"><div class="stat"><strong id="tenant-total">0</strong><span>Tenants</span></div><div class="stat"><strong id="landlord-total">0</strong><span>Landlords</span></div><div class="stat"><strong>—</strong><span>Verified owners</span></div><div class="stat"><strong id="open-report-total">0</strong><span>Reports</span></div></section>
+        <section id="payments" class="portal-panel"><h2>Plans and payments</h2><p>Subscription status gates listing publication. Configure M-Pesa credentials before accepting real payments.</p></section>
+      </div>
+    </div>
+  </div></main>
+  <script src="client-config.js"></script><script src="portal.js"></script>
+</body>
+</html>

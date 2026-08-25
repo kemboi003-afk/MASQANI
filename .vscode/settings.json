@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/*.tsbuildinfo": true,
+    ".masqani-data": true
+  },
+  "explorer.sortOrder": "filesFirst"
+}

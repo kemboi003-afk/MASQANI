@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tenant dashboard | MASQANI</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="logo.css"><link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <header class="site-header"><a class="logo" href="index.html"><img src="assets/masqani-logo.png" alt="MASQANI"></a><nav class="desktop-nav"><a href="listings.html">Find a home</a><a href="tenant.html">Tenant dashboard</a><a href="landlord.html">List property</a></nav><div class="header-actions"><a class="login" href="auth.html">Log in</a></div></header>
+  <main class="portal-page"><div class="container">
+    <div class="portal-head"><div><p class="eyebrow">TENANT DASHBOARD</p><h1>Your house-hunting workspace</h1><p id="dashboard-message" class="muted">Log in to see your live account activity.</p></div><a class="button" href="listings.html">Browse listings</a></div>
+    <div class="portal-layout"><aside class="portal-nav"><a class="active" href="#overview">Overview</a><a href="#saved">Saved homes</a><a href="#viewings">Viewings</a><a href="#alerts">Saved searches</a><a href="safety.html">Safety centre</a></aside>
+      <div class="portal-grid">
+        <section id="overview" class="stat-grid"><div class="stat"><strong id="saved-count">0</strong><span>Saved homes</span></div><div class="stat"><strong id="viewing-count">0</strong><span>Viewing requests</span></div><div class="stat"><strong>0</strong><span>Applications</span></div><div class="stat"><strong>0</strong><span>Unread alerts</span></div></section>
+        <section id="saved" class="portal-panel"><h2>Saved homes</h2><p>Compare homes, then request a viewing when ready.</p><div id="saved-list" class="portal-list"></div></section>
+        <section id="viewings" class="portal-panel"><h2>Viewing requests</h2><p>Exact addresses should only be shared after confirmation.</p><div id="viewing-list" class="portal-list"></div></section>
+        <section id="alerts" class="portal-panel"><h2>Saved search alerts</h2><p>Search alerts will notify you when matching homes are added.</p><a href="listings.html" class="button button-small">Search homes</a></section>
+      </div>
+    </div>
+  </div></main>
+  <script src="client-config.js"></script><script src="portal.js"></script>
+</body>
+</html>

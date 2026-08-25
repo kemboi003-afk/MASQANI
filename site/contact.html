@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact | MASQANI</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="logo.css"><link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <header class="site-header"><a class="logo" href="index.html"><img src="assets/masqani-logo.png" alt="MASQANI"></a><nav class="desktop-nav"><a href="listings.html">Find a home</a><a href="safety.html">Safety centre</a><a href="about.html">About</a></nav><div class="header-actions"><a class="login" href="auth.html">Log in</a></div></header>
+  <main class="portal-page"><div class="container"><div class="portal-head"><div><p class="eyebrow">CONTACT MASQANI</p><h1>How can we help?</h1><p class="muted">For a suspicious listing, use the report option in your account so we can link your report to the property.</p></div></div>
+    <section class="portal-panel"><h2>Send a message</h2><form class="portal-form" id="contact-form"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input name="email" type="email" required placeholder="you@example.com"></label><label class="wide">Message<textarea name="message" rows="5" required minlength="10" placeholder="Tell us what you need help with."></textarea></label><button class="button wide">Send message</button></form><p id="contact-status" class="muted" aria-live="polite"></p></section>
+  </div></main>
+  <script src="client-config.js"></script>
+  <script>
+    document.querySelector('#contact-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const status = document.querySelector('#contact-status');
+      try {
+        const response = await fetch(`${window.MASQANI_API_URL || 'http://localhost:4000'}/api/contact`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(form))) });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.message || 'We could not send your message.');
+        form.reset(); status.textContent = data.message;
+      } catch (error) { status.textContent = error.message; }
+    });
+  </script>
+</body>
+</html>

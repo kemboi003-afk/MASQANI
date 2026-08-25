@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Landlord dashboard | MASQANI</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="logo.css"><link rel="stylesheet" href="portal.css">
+</head>
+<body>
+  <header class="site-header"><a class="logo" href="index.html"><img src="assets/masqani-logo.png" alt="MASQANI"></a><nav class="desktop-nav"><a href="listings.html">Find a home</a><a href="landlord.html">List property</a><a href="safety.html">Verification</a></nav><div class="header-actions"><a class="login" href="auth.html">Log in</a></div></header>
+  <main class="portal-page"><div class="container">
+    <div class="portal-head"><div><p class="eyebrow">LANDLORD & AGENT</p><h1>Manage your listings.</h1><p id="dashboard-message" class="muted">Log in with a landlord account to manage live listings.</p></div><a class="button" href="auth.html">Create landlord account</a></div>
+    <div class="portal-layout"><aside class="portal-nav"><a class="active" href="#add">Add property</a><a href="#properties">My properties</a><a href="#viewings">Viewing requests</a><a href="#verification">Verification</a><a href="#plans">Plans</a></aside>
+      <div class="portal-grid">
+        <section id="add" class="portal-panel"><h2>Add a property</h2><p>Use real photos, exact monthly rent and an approximate location. Your listing is reviewed before publishing.</p>
+          <form class="portal-form" id="property-form">
+            <label>Property title<input name="title" required placeholder="e.g. Self-contained bedsitter"></label>
+            <label>Monthly rent (KSh)<input name="rent" type="number" required min="1" placeholder="e.g. 8500"></label>
+            <label>Property type<select name="propertyType"><option>Single Room</option><option>Bedsitter</option><option>1 Bedroom</option><option>2 Bedroom</option><option>House</option></select></label>
+            <label>Location / estate<input name="location" required placeholder="e.g. Uthiru, Nairobi"></label>
+            <label>Bedrooms<input name="bedrooms" type="number" min="0" value="1"></label>
+            <label>Bathrooms<input name="bathrooms" type="number" min="1" value="1"></label>
+            <label class="wide">Description<textarea name="description" rows="4" required placeholder="Describe exactly what tenants will find."></textarea></label>
+            <button class="button wide" type="submit">Submit for review</button>
+          </form>
+          <div class="notice">Submission requires a landlord account, phone verification and an active listing plan. Do not use misleading information.</div>
+        </section>
+        <section id="properties" class="portal-panel"><h2>My properties</h2><div id="landlord-properties" class="portal-list"></div></section>
+        <section id="viewings" class="portal-panel"><h2>Viewing requests</h2><div id="landlord-viewings" class="portal-list"></div></section>
+        <section id="verification" class="portal-panel"><h2>Verification</h2><p>MASQANI verifies owner identity and listing information. Verification is not purchased and cannot be claimed before review.</p></section>
+        <section id="plans" class="portal-panel"><h2>Listing plans</h2><p>Basic: KSh 1,200 / 30 days · Standard: KSh 3,200 / 30 days · Premium: KSh 6,900 / 30 days.</p></section>
+      </div>
+    </div>
+  </div></main>
+  <script src="client-config.js"></script><script src="portal.js"></script>
+</body>
+</html>

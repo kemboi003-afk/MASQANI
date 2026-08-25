@@ -1,0 +1,40 @@
+.logo { display: flex; align-items: center; }
+.logo img { display: block; width: 164px; height: auto; }
+.footer-logo img { width: 185px; }
+
+/* A Kenyan rental apartment exterior, distinct from the inherited starter image. */
+.hero {
+  background-image: url("https://propscout.co.ke/storage/properties/files/flat-and-apartments/webp/1-and-2-bedroom-apartment-for-rent-in-safaripark-usiu-thika-road-o2mzc.webp");
+  background-position: center;
+}
+
+.property-type { margin: 0 0 4px; color: #0f5c5e; font-size: 11px; font-weight: 800; letter-spacing: .7px; text-transform: uppercase; }
+
+.login { border: 0; background: transparent; cursor: pointer; font: 600 14px Inter, sans-serif; }
+.property-card { animation: card-enter .35s ease both; }
+.property-card:nth-child(2) { animation-delay: .04s; }.property-card:nth-child(3) { animation-delay: .08s; }.property-card:nth-child(4) { animation-delay: .12s; }
+.property-card:nth-child(5) { animation-delay: .16s; }.property-card:nth-child(6) { animation-delay: .2s; }
+.view-button { width: 100%; margin-top: 14px; border: 1px solid #0f5c5e; border-radius: 8px; padding: 9px; background: #fff; color: #0f5c5e; font: 700 13px Inter, sans-serif; cursor: pointer; transition: .2s; }
+.view-button:hover { background: #e7f2f1; }
+.account-dialog { color: #172326; background: #fff; }
+.account-dialog form { display: grid; gap: 14px; }
+.account-dialog label { display: grid; gap: 7px; margin: 0; color: #526568; font-size: 13px; font-weight: 700; }
+.account-dialog input, .account-dialog select, .account-dialog textarea { width: 100%; border: 1px solid #d9e0dc; border-radius: 9px; padding: 12px; color: #172326; background: #fff; font: 500 14px Inter, sans-serif; resize: vertical; }
+.account-dialog input:focus, .account-dialog select:focus, .account-dialog textarea:focus { outline: 2px solid #0f5c5e55; border-color: #0f5c5e; }
+.dialog-copy, .auth-note { margin: -4px 0 0; color: #526568; font-size: 13px; line-height: 1.55; }
+.auth-note { text-align: center; font-size: 11px; }
+.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; padding: 3px; border-radius: 9px; background: #f0f3f1; }
+.auth-tab { border: 0; border-radius: 7px; padding: 9px; color: #526568; background: transparent; font: 700 13px Inter, sans-serif; cursor: pointer; }
+.auth-tab.active { color: #0f5c5e; background: #fff; box-shadow: 0 1px 3px #17232618; }
+.auth-submit { width: 100%; margin-top: 4px; }
+.auth-divider { display: flex; align-items: center; gap: 10px; color: #7b8989; font-size: 12px; }.auth-divider::before,.auth-divider::after{content:"";height:1px;background:#d9e0dc;flex:1}
+.google-button { display: flex; align-items: center; justify-content: center; gap: 11px; border: 1px solid #cbd5d2; border-radius: 9px; padding: 12px; background: #fff; color: #172326; font: 700 14px Inter, sans-serif; cursor: pointer; transition: .2s; }
+.google-button:hover { background: #f8f7f3; border-color: #0f5c5e; }.google-button span { color: #4285f4; font-size: 18px; font-weight: 800; }
+.mobile-nav button { border: 0; background: transparent; font: inherit; color: inherit; cursor: pointer; }
+.toast { position: fixed; z-index: 30; right: 18px; bottom: 22px; max-width: min(360px, calc(100% - 36px)); border-radius: 10px; padding: 13px 16px; color: #fff; background: #172326; box-shadow: 0 12px 35px #17232644; font-size: 14px; font-weight: 600; transform: translateY(20px); opacity: 0; pointer-events: none; transition: .22s ease; }.toast.show { transform: translateY(0); opacity: 1; }
+@keyframes card-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+@media (max-width: 800px) { .toast { bottom: 80px; }.account-dialog { padding: 24px 18px; } }
+
+.active-nav { color: #0f5c5e !important; background: #e7f2f1; border-radius: 7px; }.listing-page { min-height: calc(100vh - 76px); }.listing-intro { padding: 58px 0 52px; background: #e7f2f1; }.listing-intro h1 { font-size: clamp(38px, 5vw, 58px); margin-bottom: 10px; }.listing-intro p:last-child { max-width: 600px; color: #526568; }.listing-layout { display: grid; grid-template-columns: 255px 1fr; gap: 30px; padding: 42px 0 80px; }.listing-filters { align-self: start; position: sticky; top: 98px; display: grid; gap: 15px; padding: 20px; border: 1px solid #d9e0dc; border-radius: 14px; background: #fff; }.filter-heading { display: flex; justify-content: space-between; align-items: center; }.filter-heading h2 { margin: 0; font-size: 20px; }.filter-heading button { border: 0; background: none; color: #0f5c5e; font: 700 12px Inter, sans-serif; cursor: pointer; }.listing-filters label { display: grid; gap: 7px; color: #526568; font-size: 12px; font-weight: 800; }.listing-filters input,.listing-filters select,.listing-toolbar select { border: 1px solid #d9e0dc; border-radius: 8px; padding: 11px; color: #172326; background: #fff; font: 500 13px Inter, sans-serif; }.listing-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 17px; }.listing-toolbar p { margin: 0; color: #526568; font-size: 14px; font-weight: 700; }.listing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }.listing-card { overflow: hidden; border: 1px solid #d9e0dc; border-radius: 14px; background: #fff; box-shadow: 0 3px 12px #1723260a; }.listing-card>img { display: block; width: 100%; height: 220px; object-fit: cover; background: #e7f2f1; }.listing-content { padding: 17px; }.listing-content h2 { margin: 0 0 6px; font-size: 19px; letter-spacing: -.45px; }.listing-price { margin: 14px 0 10px; font-size: 19px; font-weight: 800; }.listing-price small { color: #526568; font-size: 12px; font-weight: 500; }.listing-meta,.detail-facts { display: flex; gap: 9px; }.listing-meta span,.detail-facts span { border-radius: 999px; padding: 5px 8px; color: #526568; background: #f0f3f1; font-size: 11px; font-weight: 700; }.listing-description { min-height: 76px; margin: 14px 0; color: #526568; font-size: 13px; line-height: 1.55; }.listing-footer { display: flex; justify-content: space-between; align-items: center; gap: 8px; border-top: 1px solid #e8ecea; padding-top: 12px; }.preview-status { color: #89690c; font-size: 10px; font-weight: 700; }.listing-footer button { border: 0; padding: 0; background: none; color: #0f5c5e; font: 800 13px Inter, sans-serif; cursor: pointer; }.property-dialog { width: min(850px, calc(100% - 30px)); padding: 0; overflow: hidden; border: 0; border-radius: 15px; background: #fff; }.property-dialog::backdrop { background: #172326a6; }.property-dialog article { display: grid; grid-template-columns: 1fr 1fr; }.detail-image { width: 100%; height: 100%; min-height: 430px; object-fit: cover; background: #e7f2f1; }.detail-content { padding: 31px; }.detail-content h1 { margin: 0 0 8px; font-size: 31px; letter-spacing: -1px; }.detail-content h2 { margin: 27px 0 8px; font-size: 18px; letter-spacing: -.4px; }.detail-content>p { color: #526568; font-size: 14px; line-height: 1.55; }.detail-content .button { margin-top: 18px; width: 100%; }.safety-note { margin-top: 20px; border-left: 3px solid #f4b942; padding: 11px 12px; color: #526568; background: #fdf6e6; font-size: 12px; line-height: 1.5; }
+@media(max-width:800px){.listing-layout{grid-template-columns:1fr;padding-top:25px}.listing-filters{position:static;grid-template-columns:repeat(2,1fr)}.filter-heading{grid-column:span 2}.listing-filters .button{grid-column:span 2}.listing-grid{grid-template-columns:1fr}.property-dialog article{grid-template-columns:1fr}.detail-image{min-height:230px;height:230px}.detail-content{padding:24px}.listing-description{min-height:0}}@media(max-width:520px){.listing-filters{grid-template-columns:1fr}.filter-heading,.listing-filters .button{grid-column:auto}.listing-toolbar{align-items:flex-start;gap:8px;flex-direction:column}.listing-intro{padding:40px 0}.listing-card>img{height:205px}}

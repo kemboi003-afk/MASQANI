@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="MASQANI — find verified rental homes in Kenya." />
+    <title>MASQANI — Find your place.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="logo.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#home" aria-label="MASQANI home"><img src="assets/masqani-logo.png" alt="MASQANI — Find your place." /></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="listings.html">Find a home</a><a href="#how-it-works">How it works</a><a href="tenant.html">Tenant</a><a href="landlord.html">Landlord</a>
+      </nav>
+      <div class="header-actions"><button class="login" id="open-auth" type="button">Log in</button><button class="login" id="logout-button" type="button" hidden>Log out</button><button class="button button-small" id="list-property" type="button">List a property</button></div>
+      <button class="menu-button" aria-label="Open navigation" type="button">☰</button>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+          <p class="eyebrow light">KENYA'S SAFER RENTAL MARKETPLACE</p>
+          <h1>Find your place.</h1>
+          <p class="hero-copy">Discover homes that fit your budget, location and lifestyle — with people you can trust.</p>
+          <form class="search-card" id="search-form">
+            <label><span>⌖</span><input id="location" placeholder="Where are you looking?" value="Nairobi" /></label>
+            <label class="select-label"><span>⌂</span><select id="type"><option value="">Any property type</option><option>Single Room</option><option>Bedsitter</option><option>1 Bedroom</option><option>House</option></select></label>
+            <label class="select-label"><span>KSh</span><select id="budget"><option value="">Any budget</option><option value="20000">Up to KSh 20,000</option><option value="40000">Up to KSh 40,000</option><option value="70000">Up to KSh 70,000</option></select></label>
+            <button class="button search-button" type="submit">Search homes <span>→</span></button>
+          </form>
+          <div class="trust-row"><span>✓ Verification for owner-submitted listings</span><span>⌖ Kenya-focused search</span><span>⌁ Safer house hunting</span></div>
+        </div>
+      </section>
+
+      <section class="quick-search container" aria-label="Quick filters">
+        <button class="filter-chip active" data-filter="all">All homes</button><button class="filter-chip" data-filter="Single Room">Single rooms</button><button class="filter-chip" data-filter="Bedsitter">Bedsitters</button><button class="filter-chip" data-filter="1 Bedroom">1 bedroom</button><button class="filter-chip" data-filter="House">Houses</button>
+        <button class="filter-button" id="filter-button">☷ Filters</button>
+      </section>
+
+      <section id="homes" class="properties-section container">
+        <div class="section-heading"><div><p class="eyebrow">KENYAN RENTAL OPTIONS</p><h2>Explore homes</h2><p class="muted" id="result-count">Loading preview listings</p></div><a href="listings.html" class="text-link">View all homes →</a></div>
+        <div id="property-grid" class="property-grid"></div>
+      </section>
+
+      <section class="safety-section"><div class="container safety-grid"><div class="safety-illustration"><span>✓</span></div><div><p class="eyebrow gold">BUILT FOR PEACE OF MIND</p><h2>House hunting, made safer.</h2><p>We review landlord identity and listing information before a property earns the Masqani Verified badge.</p><ul><li><span>✓</span> Verified landlord profiles</li><li><span>✓</span> Clear rent and property details</li><li><span>✓</span> Simple, secure viewing requests</li></ul><a href="#how-it-works" class="button button-light">How verification works</a></div></div></section>
+
+      <section id="how-it-works" class="how-section container"><p class="eyebrow">SIMPLE FROM START TO FINISH</p><h2>Find. Verify. Move in.</h2><div class="steps"><article><span>01</span><h3>Search nearby</h3><p>Browse homes by area, price, size and the things you need.</p></article><article><span>02</span><h3>Check the details</h3><p>See clear property information and Masqani verification.</p></article><article><span>03</span><h3>Request a viewing</h3><p>Found a place you like? Choose a time to see it in person.</p></article></div></section>
+
+      <section id="landlords" class="landlord-cta"><div class="container landlord-inner"><div><p class="eyebrow gold">FOR LANDLORDS &amp; AGENTS</p><h2>Ready to find your next tenant?</h2><p>List your property, manage viewing requests and build trust with verification.</p></div><a href="#" class="button button-gold">List your property →</a></div></section>
+    </main>
+
+    <footer><div class="container footer-grid"><div><a class="logo footer-logo" href="#home"><img src="assets/masqani-logo.png" alt="MASQANI — Find your place." /></a><p>Find your place.</p><small>© 2026 Masqani. Built for easier house hunting.</small></div><div><h3>Explore</h3><a href="listings.html">Find a home</a><a href="tenant.html">Tenant dashboard</a><a href="landlord.html">Landlord dashboard</a><a href="about.html">About MASQANI</a><a href="contact.html">Contact</a></div><div><h3>Stay safe</h3><a href="safety.html">Verification</a><a href="safety.html">Safety centre</a><a href="auth.html">Report a listing</a><a href="admin.html">Admin access</a></div></div></footer>
+    <nav class="mobile-nav"><a href="#home">⌂<span>Home</span></a><a href="#homes">⌕<span>Search</span></a><button id="saved-button" type="button">♡<span>Saved</span></button><button id="viewings-button" type="button">◷<span>Viewings</span></button><button id="account-button" type="button">◉<span>Account</span></button></nav>
+    <dialog id="filter-dialog"><form method="dialog"><button class="close" aria-label="Close">×</button><p class="eyebrow">NARROW YOUR SEARCH</p><h2>Filters</h2><label>Bedrooms<select id="bedrooms"><option value="">Any number</option><option value="1">1 bedroom</option><option value="2">2 bedrooms</option><option value="3">3+ bedrooms</option></select></label><label>Maximum monthly rent<select id="modal-budget"><option value="">Any budget</option><option value="20000">KSh 20,000</option><option value="40000">KSh 40,000</option><option value="70000">KSh 70,000</option></select></label><button class="button" id="apply-filter" value="default">Apply filters</button></form></dialog>
+    <dialog id="auth-dialog" class="account-dialog"><form id="auth-form"><button class="close" type="button" data-close="auth-dialog" aria-label="Close">×</button><p class="eyebrow">WELCOME TO MASQANI</p><h2 id="auth-title">Log in</h2><p class="dialog-copy" id="auth-copy">Access saved homes and viewing requests.</p><div class="auth-tabs"><button class="auth-tab active" type="button" data-mode="login">Log in</button><button class="auth-tab" type="button" data-mode="register">Create account</button></div><div id="register-fields" hidden><label>I am using Masqani as<select id="auth-role"><option value="tenant">A house hunter</option><option value="landlord">A landlord or agent</option></select></label><label>Full name<input id="auth-name" autocomplete="name" placeholder="Your name" /></label><label>Phone number<input id="auth-phone" autocomplete="tel" placeholder="0712 345 678" /></label></div><label>Email address<input id="auth-email" type="email" autocomplete="email" required placeholder="you@example.com" /></label><label>Password<input id="auth-password" type="password" autocomplete="current-password" required minlength="8" placeholder="At least 8 characters" /></label><button class="button auth-submit" type="submit">Log in</button><div class="auth-divider"><span>or</span></div><button class="google-button" id="google-login" type="button"><span aria-hidden="true">G</span> Continue with Google</button><p class="auth-note">Never share your password or send money before viewing a property.</p></form></dialog>
+    <dialog id="viewing-dialog" class="account-dialog"><form id="viewing-form"><button class="close" type="button" data-close="viewing-dialog" aria-label="Close">×</button><p class="eyebrow">REQUEST A VIEWING</p><h2 id="viewing-title">View property</h2><p class="dialog-copy">Choose a time. The landlord will confirm before the exact address is shared.</p><label>Preferred date and time<input id="viewing-date" type="datetime-local" required /></label><label>Message (optional)<textarea id="viewing-note" rows="3" placeholder="For example: I am available after work."></textarea></label><button class="button auth-submit" type="submit">Send viewing request</button></form></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="client-config.js"></script>
+    <script src="google-config.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
